@@ -1,5 +1,6 @@
     let container = document.getElementById("container");
-
+    let middleX = window.innerWidth / 2;
+    let middleY = window.innerHeight / 2;
     
     
     document.addEventListener("mousemove", function(event) {
@@ -10,11 +11,21 @@
     	let mouseX = event.clientX;
     	let mouseY = event.clientY;
     	
+        // circle
         // begin drawing
-    	ctx.beginPath();
-    	ctx.strokeStyle = "rgba(221, 221, 221, 0.83)";
-		ctx.arc(mouseX, mouseY, 8, 0, 2*Math.PI);
-		ctx.stroke();
+//    	ctx.beginPath();
+//    	ctx.strokeStyle = "rgba(221, 221, 221, 0.83)";
+//		let circle = ctx.arc(mouseX, mouseY, 18, 0, 2*Math.PI);
+//		ctx.stroke();
+        
+        // line
+        
+        ctx.strokeStyle = "rgba(255, 255, 255, 0.64)";
+        ctx.beginPath();
+        ctx.moveTo(mouseX,mouseY);
+        ctx.lineTo(middleX, middleY);
+        ctx.stroke();
+     
     });
 
     document.addEventListener("click", function(event) {
@@ -25,10 +36,14 @@
     	let mouseX = event.clientX;
     	let mouseY = event.clientY;
     	
+        // circle
         // begin drawing
     	ctx.beginPath();
-    	ctx.fillStyle = "#33dd95";
-		ctx.arc(mouseX, mouseY, 10, 0, 2*Math.PI);
+    	ctx.fillStyle = "#99d4bb";
+		ctx.arc(mouseX, mouseY, 5, 0, 2*Math.PI);
 		ctx.fill();
+        
+        
+        
     });
 
