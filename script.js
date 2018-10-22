@@ -20,7 +20,7 @@
         
         // line
         
-        ctx.strokeStyle = "rgba(255, 255, 255, 0.64)";
+        ctx.strokeStyle = `rgba(${mouseY}, ${mouseY} , 0, 0.64)`;
         ctx.beginPath();
         ctx.moveTo(mouseX,mouseY);
         ctx.lineTo(middleX, middleY);
@@ -39,7 +39,7 @@
         // circle
         // begin drawing
     	ctx.beginPath();
-    	ctx.fillStyle = "#99d4bb";
+    	ctx.fillStyle = `rgba(${mouseY}, ${mouseY} , 0, 0.64)`;
 		ctx.arc(mouseX, mouseY, 5, 0, 2*Math.PI);
 		ctx.fill();
         
